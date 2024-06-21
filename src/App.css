@@ -1,0 +1,22 @@
+/* .container {
+    display: flex;
+    width: inherit;
+    gap: 40px;
+    background-color: #eee;
+} 
+
+.item {
+    display: flex;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: #fff6;
+    margin-bottom: 0.3rem;
+}
+
+.item.sortable-ghost {
+    background-color: #c8ebfb;
+} */
+
+.main {
+    display: flex;
+}

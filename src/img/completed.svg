@@ -1,0 +1,15 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<radialGradient gradientTransform="translate(10 10) rotate(0) scale(10 10)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_angular_1_147_0" gradientUnits="userSpaceOnUse">
+			<stop offset="0.525216" stop-color="#5C81C2"/>
+			<stop offset="0.726087" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+			<stop offset="0.755725" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+			<stop offset="0.772701" stop-color="#5C81C2"/>
+		</radialGradient>
+	</defs>
+	<path id="Shape" d="M0 10C0 15.5306 4.46936 20 10 20C15.5306 20 20 15.5306 20 10C20 4.46939 15.5306 0 10 0C4.46936 0 0 4.46939 0 10ZM1.66125 10C1.66125 5.40408 5.40405 1.66122 10 1.66122C14.5959 1.66122 18.3387 5.40408 18.3387 10C18.3387 14.5959 14.5959 18.3388 10 18.3388C5.40405 18.3388 1.66125 14.5959 1.66125 10Z" clip-rule="evenodd" fill="url(#paint_angular_1_147_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="Shape" d="M8.04 13.4L5.95 10.29C5.7 9.91 5.78 9.4 6.17 9.15C6.55 8.89 7.06 8.97 7.31 9.36L8.84 11.62L12.75 7.71C13.08 7.38 13.62 7.37 13.95 7.7C14.29 8.04 14.29 8.55 13.95 8.89L9.31 13.48C9.18 13.65 8.53 14.01 8.04 13.4Z" fill="#5C81C2" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>

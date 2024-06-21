@@ -1,0 +1,28 @@
+.header-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-type {
+  display: flex;
+  gap: 8px;
+}
+
+.picture-type {
+  width: 20px;
+  height: 20px;
+}
+
+.name-type {
+  font-size: 14px;
+}
+
+.wrapper-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.change-button {
+  width: 14px;
+  height: 15px;
+}

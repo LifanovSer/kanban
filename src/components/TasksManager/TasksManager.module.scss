@@ -1,0 +1,20 @@
+.tasks-manager {
+    padding: 40px;
+    flex-grow: 1;
+    min-width: 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 23px;
+        align-items: center;
+    }
+
+    &__title {
+        color: var(--default-black-color);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+}

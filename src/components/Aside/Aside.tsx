@@ -1,31 +1,108 @@
-import React from "react";
-import asideStyle from "./Aside.module.css";
-import Loupe from "@img/loupe.svg?react";
-import Plus from "@img/plus.svg?react";
-import NewMenu from "@img/newMenu.svg?react";
-import Question from "@img/questionIcon.svg?react";
-import Arrow from "@img/arrow.svg?react";
+import { UiSvgIcon } from "@/shared/ui";
+import { useState } from "react";
+import styles from "./Aside.module.scss";
 
 export const Aside = () => {
-  return (
-    <aside className={asideStyle["aside"]}>
-      <div className={asideStyle["sidebar"]}>
-        <button className={asideStyle["sidebar-button"]}>
-            <Loupe />
-        </button>
-        <button className={asideStyle["sidebar-button"]}>
-        <Plus />
-        </button>
-        <button className={asideStyle["sidebar-button"]}>
-        <NewMenu />
-        </button>
-      </div>
-        <button className={asideStyle["show-full-menu"]}>
-            <Arrow className={asideStyle["arrow"]} />
-        </button>
-      <div className={asideStyle["wrapper-question"]}>
-        <Question />
-      </div>
-    </aside>
-  );
+    const [isShow, setIsShow] = useState(false);
+
+    const handleMenu = () => {
+        setIsShow(!isShow);
+    };
+
+    return (
+        <aside
+            className={`${styles["aside"]} ${!isShow ? styles["aside--collapsed"] : ""}`}
+        >
+            <nav className={styles["aside__sidebar"]}>
+                <div className={styles["aside__wrapper-sidebar-buttons"]}>
+                    <ul
+                        className={`${styles["aside__buttons-list"]} ${styles["aside__buttons-list--position"]} `}
+                    >
+                        <li className={styles["aside__button-item"]}>
+                            <button className={styles["aside__sidebar-button"]}>
+                                <UiSvgIcon
+                                    name="loupe-icon"
+                                    color="#fff"
+                                    width="20"
+                                    height="20"
+                                    className={styles["aside__svg-button"]}
+                                />
+                                <span
+                                    className={`${styles["aside__button-text"]} ${!isShow ? styles["aside__button-text--hide"] : ""}`}
+                                >
+                                    Поиск
+                                </span>
+                            </button>
+                        </li>
+                        <li className={styles["aside__button-item"]}>
+                            <button className={styles["aside__sidebar-button"]}>
+                                <UiSvgIcon
+                                    name="plus-icon"
+                                    color="#fff"
+                                    width="20"
+                                    height="20"
+                                    className={styles["aside__svg-button"]}
+                                />
+                                <span
+                                    className={`${styles["aside__button-text"]} ${!isShow ? styles["aside__button-text--hide"] : ""}`}
+                                >
+                                    Добавить
+                                </span>
+                            </button>
+                        </li>
+                        <li className={styles["aside__button-item"]}>
+                            <button className={styles["aside__sidebar-button"]}>
+                                <UiSvgIcon
+                                    name="menu-icon"
+                                    color="#fff"
+                                    width="20"
+                                    height="20"
+                                    className={styles["aside__svg-button"]}
+                                />
+                                <span
+                                    className={`${styles["aside__button-text"]} ${!isShow ? styles["aside__button-text--hide"] : ""}`}
+                                >
+                                    Меню
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <button
+                onClick={() => {
+                    handleMenu();
+                }}
+                className={styles["aside__full-menu"]}
+            >
+                <UiSvgIcon
+                    name="arrow-icon"
+                    color="#fff"
+                    width="20"
+                    height="20"
+                    className={`${styles["aside__arrow"]} ${isShow ? styles["aside__arrow--back"] : ""}`}
+                />
+            </button>
+
+            <ul className={styles["aside__bottom-buttons-list"]}>
+                <li className={styles["aside__bottom-button-item"]}>
+                    <button className={styles["aside__button-question"]}>
+                        <UiSvgIcon
+                            name="question-icon"
+                            color="#fff"
+                            width="24"
+                            height="24"
+                            className={styles["aside__svg-button"]}
+                        />
+                        <span
+                            className={`${styles["aside__button-text"]} ${!isShow ? styles["aside__button-text--hide"] : ""}`}
+                        >
+                            Вопросы
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+    );
 };

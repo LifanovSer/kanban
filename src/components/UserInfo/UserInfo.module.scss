@@ -1,0 +1,36 @@
+.user-info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+    &__summ {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__money-amount {
+        color: var(--white-font-color);
+        line-height: 19px;
+    }
+
+    &__currency {
+        color: var(--white-font-color);
+    }
+
+    &__avatar {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &__notification-icon {
+        margin-left: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-info {
+        gap: 0;
+    }
+}

@@ -1,0 +1,36 @@
+.header-column {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper-type {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__picture-type {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__name-type {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__wrapper-buttons {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__change-button {
+        width: 14px;
+        height: 15px;
+    }
+
+    &__label-select {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+}

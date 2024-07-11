@@ -1,0 +1,25 @@
+.task-manager-breadcrumbs {
+    display: flex;
+    align-items: center;
+
+    &__platform-title {
+        margin-left: 10px;
+        color: var(--gray-text);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+    }
+
+    &__separation {
+        color: var(--gray-text);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+        margin-left: 5px;
+    }
+
+    &__chapter {
+        font-weight: 400;
+        margin-left: 10px;
+    }
+}

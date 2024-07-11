@@ -1,0 +1,23 @@
+.header-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background: var(--bc-dark-blue);
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link-list-title {
+        color: var(--white-font-color);
+        font-weight: 400;
+        font-size: 16px;
+    }
+}

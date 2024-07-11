@@ -1,0 +1,40 @@
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    line-height: 19px;
+
+    &__link {
+        color: var(--default-gray-color);
+        position: relative;
+
+        &:hover {
+            color: var(--white-font-color);
+
+            &::after {
+                width: 110%;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--orange); /* Цвет подчеркивания */
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &_active {
+            color: var(--white-font-color);
+
+            &::after {
+                width: 110%;
+            }
+        }
+    }
+}

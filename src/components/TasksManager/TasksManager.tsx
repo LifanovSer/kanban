@@ -1,21 +1,42 @@
-import React from "react";
-import { TasksList } from "./TasksList/TasksList";
-import styleTasks from "./TasksManager.module.css";
-import PlayButton from "@img/playButton.svg?react";
-
+import { UiSvgIcon } from "@/shared/ui";
+import styles from "./TasksManager.module.scss";
+import {
+    TaskManagerBreadcrumbs,
+    TaskManagerHeaderList,
+    TasksManagerList,
+} from "./ui/";
+import { useFeatures } from "./useFeatures/useFeatures";
 
 export const TasksManager = () => {
-  return (
-    <section className={styleTasks["tasks-manager"]}>
-      <div className={styleTasks["wrapper-titles"]}>
-        <h1 className={styleTasks["title-block"]}>Проекты</h1>
-        <div className={styleTasks["wrapper-additional-info"]}>
-          <PlayButton className={styleTasks["play-button"]} />
-          <span className={styleTasks["name-block"]}>CRM-система /</span>
-          <span className={styleTasks["add-text"]}>Процессы</span>
-        </div>
-      </div>
-      <TasksList />
-    </section>
-  );
+    const {
+        columns,
+        columnTitles,
+        handleUpdate,
+        handleAddTask,
+        handleRemoveColumn,
+        handleAddColumn,
+        handleUpdateColumnType,
+    } = useFeatures();
+    return (
+        <section className={styles["tasks-manager"]}>
+            <div className={styles["tasks-manager__wrapper"]}>
+                <h1 className={styles["tasks-manager__title"]}>Проекты</h1>
+
+                <TaskManagerBreadcrumbs
+                    icon={<UiSvgIcon name="play-icon" width="20" height="20" />}
+                />
+            </div>
+
+            <TaskManagerHeaderList handleAddColumn={handleAddColumn} />
+
+            <TasksManagerList
+                columns={columns}
+                columnTitles={columnTitles}
+                handleAddTask={handleAddTask}
+                handleRemoveColumn={handleRemoveColumn}
+                handleUpdate={handleUpdate}
+                handleUpdateColumnType={handleUpdateColumnType}
+            />
+        </section>
+    );
 };

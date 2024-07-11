@@ -1,0 +1,55 @@
+.task {
+    display: flex;
+
+    &__left-side {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 4px 0px 0px 4px;
+        background: var(--bc-gray);
+        gap: 16px;
+    }
+
+    &__wrapper-users-pictures {
+        position: relative;
+    }
+
+    &__second-picture {
+        position: absolute;
+        left: 0px;
+        top: 20px;
+    }
+
+    &__progress-scale {
+        width: 34px;
+        height: 14px;
+    }
+
+    &__progress-scale-position {
+        margin-top: 15px;
+    }
+
+    &__right-side {
+        background: var(--light-gray);
+        padding: 16px;
+        font-size: 13px;
+        line-height: 15px;
+        width: 100%;
+    }
+
+    &__task-text {
+        color: var(--font-blue-color);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    &__task-number {
+        color: var(--default-black-color);
+    }
+}
+
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.5;
+}

@@ -1,0 +1,141 @@
+.aside {
+    position: relative;
+    overflow: hidden;
+    width: 190px;
+    min-height: 100vh;
+    background: var(--bc-aside-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.2s ease-in-out;
+
+    &--collapsed {
+        width: 80px;
+        display: flex;
+    }
+
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__wrapper-sidebar-buttons {
+        overflow: hidden;
+        position: relative;
+        padding: 40px 30px 30px 30px;
+
+        .aside--collapsed & {
+            overflow: hidden;
+        }
+    }
+
+    &__buttons-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__buttons-list--position {
+        margin-top: 20px;
+    }
+
+    &__button-item {
+        min-width: 48px;
+    }
+
+    &__svg-button {
+        min-width: 20px;
+    }
+
+    &__sidebar-button {
+        width: 100%;
+        min-height: 30px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__button-text {
+        color: var(--white-font-color);
+        overflow: hidden;
+        white-space: nowrap;
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__full-menu {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background: rgb(54, 73, 82);
+        position: absolute;
+        top: 50%;
+        right: -40px;
+    }
+
+    &__arrow {
+        width: 15px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-150%, -50%) rotate(-90deg);
+        transition: all 0.2s;
+
+        &--back {
+            transform: translate(-150%, -50%) rotate(90deg);
+        }
+    }
+
+    &__bottom-buttons-list {
+        overflow: hidden;
+        position: relative;
+        padding: 40px 30px 30px 30px;
+    }
+
+    &__button-question {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 1850px) {
+    .aside {
+        &__wrapper-sidebar-buttons {
+            padding: 20px;
+        }
+
+        &__bottom-buttons-list {
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .aside {
+        &__wrapper-sidebar-buttons {
+            padding: 20px 15px;
+        }
+        &__button-text {
+            font-size: 11px;
+        }
+
+        &__bottom-buttons-list {
+            padding: 20px 15px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    // .aside {
+    //     &__button-text {
+    //         display: none;
+    //     }
+    // }
+}

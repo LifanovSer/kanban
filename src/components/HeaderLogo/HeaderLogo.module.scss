@@ -1,0 +1,16 @@
+.header-logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &__link {
+        width: 25px;
+        height: 24px;
+    }
+
+    &__title {
+        color: var(--white-font-color);
+        font-weight: 400;
+        font-size: 18px;
+    }
+}

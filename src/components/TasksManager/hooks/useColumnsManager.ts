@@ -9,7 +9,7 @@ import {
     handleUpdate,
 } from ".";
 
-export const useFeatures = () => {
+export const useColumnsManager = () => {
     const [columns, setColumns] = useState<Board>(() => {
         const item = window.localStorage.getItem("columns");
         return item ? JSON.parse(item) : board;

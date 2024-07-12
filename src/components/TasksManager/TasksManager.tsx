@@ -1,5 +1,5 @@
 import { UiSvgIcon } from "@/shared/ui";
-import { useFeatures } from "./hooks/useColumnsManager";
+import { useColumnsManager } from "./hooks/useColumnsManager";
 import styles from "./TasksManager.module.scss";
 import {
     TaskManagerBreadcrumbs,
@@ -16,7 +16,7 @@ export const TasksManager = () => {
         handleRemoveColumn,
         handleAddColumn,
         handleUpdateColumnType,
-    } = useFeatures();
+    } = useColumnsManager();
     return (
         <section className={styles["tasks-manager"]}>
             <div className={styles["tasks-manager__wrapper"]}>

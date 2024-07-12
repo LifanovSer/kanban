@@ -3,24 +3,24 @@
     align-items: center;
 
     &__platform-title {
-        margin-left: 10px;
+        margin-left: 4px;
         color: var(--gray-text);
         font-weight: 400;
         font-size: 16px;
-        line-height: 137%;
+        line-height: 22px;
     }
 
     &__separation {
         color: var(--gray-text);
         font-weight: 400;
         font-size: 16px;
-        line-height: 137%;
+        line-height: 22px;
         margin-left: 5px;
     }
 
     &__chapter {
         font-weight: 400;
-        margin-left: 10px;
+        margin-left: 4px;
     }
 }
 

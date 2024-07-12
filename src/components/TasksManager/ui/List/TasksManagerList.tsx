@@ -1,3 +1,4 @@
+import { BoardItem } from "@/data/index";
 import { UiSvgIcon } from "@/shared/ui";
 import React from "react";
 import { ReactSortable } from "react-sortablejs";
@@ -18,7 +19,7 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
         <div
             className={`${styleList["column-list"]} ${styleList["column-list--position"]}`}
         >
-            {columns.map((column) => {
+            {columns.map((column: BoardItem) => {
                 return (
                     <div
                         key={column.id}

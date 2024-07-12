@@ -1,11 +1,11 @@
 import { UiSvgIcon } from "@/shared/ui";
+import { useFeatures } from "./hooks/useColumnsManager";
 import styles from "./TasksManager.module.scss";
 import {
     TaskManagerBreadcrumbs,
     TaskManagerHeaderList,
     TasksManagerList,
 } from "./ui/";
-import { useFeatures } from "./useFeatures/useFeatures";
 
 export const TasksManager = () => {
     const {

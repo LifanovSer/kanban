@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "virtual:svg-icons-register";
 import App from "./App.tsx";
-import "./style.css";
+import "./style.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>

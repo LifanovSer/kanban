@@ -1,6 +1,6 @@
 export { HeaderColumn } from "./HeaderColumn";
 import { ColumnAllTypes } from "@/data/dataTypes";
-import { handleUpdateColumnType } from "../useFeatures/useFeaturesTypes";
+import { handleUpdateColumnType } from "../hooks";
 
 export interface HeaderColumnProps {
     type: string;

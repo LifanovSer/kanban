@@ -5,7 +5,7 @@ import {
     handleRemoveColumn,
     handleUpdate,
     handleUpdateColumnType,
-} from "../../useFeatures/useFeaturesTypes";
+} from "../../hooks";
 
 interface ColumnTitles {
     type: string;

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { Board, ColumnAllTypes } from "./dataTypes";
+import { Board, ColumnAllTypes } from ".";
 
 export const board: Board = [
     {

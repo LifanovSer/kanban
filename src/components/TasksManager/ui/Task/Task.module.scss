@@ -1,5 +1,6 @@
 .task {
     display: flex;
+    z-index: 10;
 
     &__left-side {
         display: flex;

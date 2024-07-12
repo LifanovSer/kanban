@@ -16,6 +16,7 @@
         gap: 16px;
         width: 290px;
         min-width: 290px;
+        position: relative;
     }
 
     &__column--position {
@@ -26,6 +27,10 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+    }
+
+    &__react-sortable-task--full-height {
+        height: 100%;
     }
 
     &__add-tasks-button {
@@ -41,6 +46,12 @@
     &__add-tasks-button:hover {
         background: var(--blue-bc);
     }
+}
+
+.add-tasks-button--top-position {
+    position: absolute;
+    left: 50%;
+    top: 10%;
 }
 
 @media (max-width: 900px) {

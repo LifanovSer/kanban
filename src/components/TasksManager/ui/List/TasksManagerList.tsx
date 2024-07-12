@@ -40,9 +40,7 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
                             }
                             animation={150}
                             group="shared-group-name"
-                            className={
-                                styleList["column-list__react-sortable-task"]
-                            }
+                            className={`${styleList["column-list__react-sortable-task"]} ${column.tasks.length === 0 ? styleList["column-list__react-sortable-task--full-height"] : ""}`}
                         >
                             {column.tasks.map((task) => {
                                 return (
@@ -58,9 +56,7 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
                         </ReactSortable>
                         <button
                             onClick={() => handleAddTask(column.id)}
-                            className={
-                                styleList["column-list__add-tasks-button"]
-                            }
+                            className={`${styleList["column-list__add-tasks-button"]} ${column.tasks.length === 0 ? styleList["add-tasks-button--top-position"] : ""}`}
                         >
                             <UiSvgIcon
                                 name="plus-add-button"

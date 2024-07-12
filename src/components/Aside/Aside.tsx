@@ -19,7 +19,9 @@ export const Aside = () => {
                         className={`${styles["aside__buttons-list"]} ${styles["aside__buttons-list--position"]} `}
                     >
                         <li className={styles["aside__button-item"]}>
-                            <button className={styles["aside__sidebar-button"]}>
+                            <button
+                                className={`${styles["aside__sidebar-button"]} ${!isShow ? styles["aside__sidebar-button-medium-screen"] : ""}`}
+                            >
                                 <UiSvgIcon
                                     name="loupe-icon"
                                     color="#fff"
@@ -35,7 +37,9 @@ export const Aside = () => {
                             </button>
                         </li>
                         <li className={styles["aside__button-item"]}>
-                            <button className={styles["aside__sidebar-button"]}>
+                            <button
+                                className={`${styles["aside__sidebar-button"]} ${!isShow ? styles["aside__sidebar-button-medium-screen"] : ""}`}
+                            >
                                 <UiSvgIcon
                                     name="plus-icon"
                                     color="#fff"
@@ -51,7 +55,9 @@ export const Aside = () => {
                             </button>
                         </li>
                         <li className={styles["aside__button-item"]}>
-                            <button className={styles["aside__sidebar-button"]}>
+                            <button
+                                className={`${styles["aside__sidebar-button"]} ${!isShow ? styles["aside__sidebar-button-medium-screen"] : ""}`}
+                            >
                                 <UiSvgIcon
                                     name="menu-icon"
                                     color="#fff"
@@ -85,9 +91,13 @@ export const Aside = () => {
                 />
             </button>
 
-            <ul className={styles["aside__bottom-buttons-list"]}>
+            <ul
+                className={`${styles["aside__bottom-buttons-list"]} ${styles["aside__bottom-buttons-list--position"]}`}
+            >
                 <li className={styles["aside__bottom-button-item"]}>
-                    <button className={styles["aside__button-question"]}>
+                    <button
+                        className={`${styles["aside__button-question"]} ${!isShow ? styles["aside__button-question-medium-screen"] : ""}`}
+                    >
                         <UiSvgIcon
                             name="question-icon"
                             color="#fff"

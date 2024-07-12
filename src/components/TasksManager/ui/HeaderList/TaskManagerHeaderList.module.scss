@@ -3,50 +3,68 @@
     justify-content: space-between;
     width: 100%;
     position: relative;
+
+    &--top-margin {
+        margin-top: 40px;
+    }
+
+    &__wrapper-processes::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background: var(--gray-line);
+        height: 1px;
+        position: absolute;
+        bottom: -10px;
+    }
+
+    &__left-side-top {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__processes-icon {
+        width: 20px;
+        height: 18px;
+    }
+
+    &__processes-text {
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__button-add-columns {
+        padding: 9px 22px;
+        border-radius: 4px;
+        background: var(--bc-gray-blue);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: transparent;
+        transition: all 0.3s;
+    }
+
+    &__button-add-columns:hover {
+        background: var(--font-blue-color);
+        transform: scale(1.02);
+    }
 }
 
-.top-margin {
-    margin-top: 40px;
+@media (max-width: 650px) {
+    .wrapper-processes {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .button-add-columns {
+        width: 170px;
+    }
 }
 
-.wrapper-processes::after {
-    content: "";
-    display: block;
-    width: 100%;
-    background: var(--gray-line);
-    height: 1px;
-    position: absolute;
-    bottom: -10px;
-}
-
-.left-side-top {
-    display: flex;
-    gap: 8px;
-}
-
-.processes-icon {
-    width: 20px;
-    height: 18px;
-}
-
-.processes-text {
-    font-weight: 500;
-    line-height: 22px;
-}
-
-.button-add-columns {
-    padding: 9px 22px;
-    border-radius: 4px;
-    background: var(--bc-gray-blue);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: transparent;
-    transition: all 0.3s;
-}
-
-.button-add-columns:hover {
-    background: var(--font-blue-color);
-    transform: scale(1.02);
+@media (max-width: 450px) {
+    .wrapper-processes--top-margin {
+        margin-top: 15px;
+    }
 }

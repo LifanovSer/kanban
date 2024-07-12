@@ -14,35 +14,15 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
     handleUpdate,
     handleUpdateColumnType,
 }) => {
-    // const [openSelect, setOpenSelect] = useState<OpenSelect>({
-    //     id: null,
-    //     isOpen: true,
-    // });
-
-    // const handleOpenSelect = (id: string | null, isOpen: boolean) => {
-    //     setOpenSelect({ id: id, isOpen: isOpen });
-    // };
-
-    // const [openSelects, setOpenSelects] = useState<{ [key: string]: boolean }>(
-    //     {},
-    // );
-
-    // const handleOpenSelect = (id: string) => {
-    //     setOpenSelects((prev) => ({
-    //         ...prev,
-    //         [id]: !prev[id],
-    //     }));
-    // };
-
     return (
         <div
-            className={`${styleList["column-list"]} ${styleList["columns-position"]}`}
+            className={`${styleList["column-list"]} ${styleList["column-list--position"]}`}
         >
             {columns.map((column) => {
                 return (
                     <div
                         key={column.id}
-                        className={`${styleList["column"]} ${styleList["column-position"]}`}
+                        className={`${styleList["column-list__column"]} ${styleList["column-list__column--position"]}`}
                     >
                         <HeaderColumn
                             type={column.type}
@@ -50,8 +30,6 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
                             all_titles={columnTitles}
                             id={column.id}
                             handleRemoveColumn={handleRemoveColumn}
-                            // openSelects={openSelects}
-                            // handleOpenSelect={handleOpenSelect}
                             handleUpdateColumnType={handleUpdateColumnType}
                         />
                         <ReactSortable
@@ -61,11 +39,14 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
                             }
                             animation={150}
                             group="shared-group-name"
-                            className={styleList["react-sortable-task"]}
+                            className={
+                                styleList["column-list__react-sortable-task"]
+                            }
                         >
                             {column.tasks.map((task) => {
                                 return (
                                     <Task
+                                        key={task.id}
                                         id={task.id}
                                         title={task.title}
                                         number={task.number}
@@ -76,9 +57,10 @@ export const TasksManagerList: React.FC<TasksManagerListProps> = ({
                         </ReactSortable>
                         <button
                             onClick={() => handleAddTask(column.id)}
-                            className={styleList["add-tasks-button"]}
+                            className={
+                                styleList["column-list__add-tasks-button"]
+                            }
                         >
-                            {/* <PlusButton /> */}
                             <UiSvgIcon
                                 name="plus-add-button"
                                 width="14"

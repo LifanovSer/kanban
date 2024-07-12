@@ -1,51 +1,3 @@
-.wrapper-processes {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-}
-
-.top-margin {
-    margin-top: 40px;
-}
-
-.wrapper-processes::after {
-    content: "";
-    display: block;
-    width: 100%;
-    background: var(--gray-line);
-    height: 1px;
-    position: absolute;
-    bottom: -10px;
-}
-
-.left-side-top {
-    display: flex;
-    gap: 8px;
-}
-
-.processes-icon {
-    width: 20px;
-    height: 18px;
-}
-
-.button-add-columns {
-    padding: 9px 22px;
-    border-radius: 4px;
-    background: var(--bc-gray-blue);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: transparent;
-    transition: all 0.3s;
-}
-
-.button-add-columns:hover {
-    background: var(--font-blue-color);
-    transform: scale(1.02);
-}
-
 .column-list {
     max-width: 1650px;
     min-height: 100vh;
@@ -53,41 +5,53 @@
     display: flex;
     gap: 40px;
     width: 100%;
+
+    &--position {
+        margin-top: 30px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 290px;
+        min-width: 290px;
+    }
+
+    &__column--position {
+        margin-bottom: 20px;
+    }
+
+    &__react-sortable-task {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: 15%;
+    }
+
+    &__add-tasks-button {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background: var(--bc-button);
+        margin: 0px auto;
+        transition: all 0.3s;
+    }
+
+    &__add-tasks-button:hover {
+        background: var(--blue-bc);
+    }
 }
 
-.columns-position {
-    margin-top: 30px;
+@media (max-width: 900px) {
+    .column-list__column {
+        min-width: 230px;
+    }
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 290px;
-    min-width: 290px;
-}
-
-.column-position {
-    margin-bottom: 20px;
-}
-
-.react-sortable-task {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-height: 20%;
-}
-
-.add-tasks-button {
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: var(--bc-button);
-    margin: 0px auto;
-    transition: all 0.3s;
-}
-
-.add-tasks-button:hover {
-    background: var(--blue-bc);
+@media (max-width: 700px) {
+    .column-list__column {
+        min-width: 200px;
+    }
 }

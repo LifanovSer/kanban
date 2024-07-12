@@ -6,7 +6,6 @@ export const board: Board = [
         id: uuidv4(),
         type: "base",
         column_title: "Беклог",
-        // img: Base,
         tasks: [
             {
                 id: uuidv4(),
@@ -29,7 +28,6 @@ export const board: Board = [
         id: uuidv4(),
         type: "works",
         column_title: "В работе",
-        // img: BlueButtonPlay,
         tasks: [
             {
                 id: uuidv4(),
@@ -47,7 +45,6 @@ export const board: Board = [
         id: uuidv4(),
         type: "completed",
         column_title: "Выполнена",
-        // img: Completed,
         tasks: [
             {
                 id: uuidv4(),
@@ -81,98 +78,9 @@ export const board: Board = [
             },
         ],
     },
-    // {
-    //     id: uuidv4(),
-    //     type: "passed",
-    //     column_title: "Сдана",
-    //     // img: Passed,
-    //     tasks: [
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Временной промежуток при фильтрации",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Статистика по икочникам звонка",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Добавить график к статистике пользователей (количества регистраций)",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Создать тестовую сборку сервиса ( для обработки нововведений )",
-    //         },
-    //     ],
-    // },
-    // {
-    //     id: uuidv4(),
-    //     type: "cancelled",
-    //     column_title: "Отмененные",
-    //     // img: "",
-    //     tasks: [
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст отмененной задачи",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст отмененной задачи",
-    //         },
-    //     ],
-    // },
-    // {
-    //     id: uuidv4(),
-    //     type: "waiting",
-    //     column_title: "На рассмотрении",
-    //     // img: "",
-    //     tasks: [
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст рассматриваемой задачи",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст рассматриваемой задачи",
-    //         },
-    //     ],
-    // },
-    // {
-    //     id: uuidv4(),
-    //     type: "modification",
-    //     column_title: "Доработка",
-    //     // img: "",
-    //     tasks: [
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст исправляемой задачи",
-    //         },
-    //         {
-    //             id: uuidv4(),
-    //             number: `#${20413}`,
-    //             title: "Текст исправляемой задачи",
-    //         },
-    //     ],
-    // },
 ];
 
 export const columnTypes: ColumnAllTypes = [
-    // "base",
-    // "works",
-    // "completed",
-    // "passed",
-    // "cancelled",
-    // "waiting",
-    // "modification",
     {
         id: uuidv4(),
         type: "base",

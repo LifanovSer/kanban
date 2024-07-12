@@ -8,24 +8,24 @@ export const TaskManagerHeaderList: React.FC<TaskManagerHeaderListProps> = ({
 }) => {
     return (
         <div
-            className={`${styles["wrapper-processes"]} ${styles["top-margin"]}`}
+            className={`${styles["wrapper-processes"]} ${styles["wrapper-processes--top-margin"]}`}
         >
-            <div className={styles["left-side-top"]}>
+            <div className={styles["wrapper-processes__left-side-top"]}>
                 <UiSvgIcon
                     name="processes-icon"
                     width="20"
                     height="18"
                     color="#3D4044"
-                    className={styles["processes-icon"]}
+                    className={styles["wrapper-processes__processes-icon"]}
                 />
-                <span className={styles["processes-text"]}>
+                <span className={styles["wrapper-processes__processes-text"]}>
                     Процессы проекта CRM - система
                 </span>
             </div>
 
             <button
                 onClick={() => handleAddColumn()}
-                className={styles["button-add-columns"]}
+                className={styles["wrapper-processes__button-add-columns"]}
             >
                 добавить столбец
             </button>

@@ -23,3 +23,9 @@
         margin-left: 10px;
     }
 }
+
+@media (max-width: 450px) {
+    .task-manager-breadcrumbs {
+        display: none;
+    }
+}

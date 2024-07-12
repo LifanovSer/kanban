@@ -18,3 +18,15 @@
         text-align: left;
     }
 }
+
+@media (max-width: 450px) {
+    .tasks-manager {
+        padding: 30px;
+        flex-grow: 1;
+        min-width: 0;
+
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+}

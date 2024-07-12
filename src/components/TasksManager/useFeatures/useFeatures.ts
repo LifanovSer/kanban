@@ -1,5 +1,4 @@
-import { useLocalStorage } from "@/shared/utils/useLocalStorage/useLocalStorage ";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { board, columnTypes } from "../../../data/data";
 import {
@@ -16,29 +15,22 @@ import {
 } from "./useFeaturesTypes";
 
 export const useFeatures = () => {
-    // const [visibleCount, setVisibleCount] = useState(3);
-    // const [columns, setColumns] = useState<Board>(board);
-    const [columns, setColumns] = useLocalStorage<Board>("board", board);
+    const [columns, setColumns] = useState<Board>(() => {
+        const item = window.localStorage.getItem("columns");
+        return item ? JSON.parse(item) : board;
+    });
+
     const [columnTitles, setColumnTitles] =
         useState<ColumnAllTypes>(columnTypes);
 
-    // const [columnTitles, setColumnTitle] = useState(
-    //     columns.map((item) => ({
-    //         type: item.type,
-    //         column_title: item.column_title,
-    //     })),
-    // );
-
-    // useEffect(() => {
-    //     setColumns("board");
-    // }, [columns]);
-
+    useEffect(() => {
+        window.localStorage.setItem("columns", JSON.stringify(columns));
+    }, [columns]);
     const handleAddColumn: handleAddColumn = () => {
-        // setVisibleCount((prevValue) => Math.min(prevValue + 1, columns.length));
         const newColumn = {
             id: uuidv4(),
-            type: "",
-            column_title: "",
+            type: columnTitles[0].type,
+            column_title: columnTitles[0].column_title,
             tasks: [],
         };
 
@@ -99,16 +91,11 @@ export const useFeatures = () => {
                 return column.id !== columnId;
             }),
         );
-
-        // setVisibleCount((prevCount) => prevCount - 1);
     };
 
     return {
         columns,
         columnTitles,
-        // columnsLength: board.length,
-
-        // visibleCount,
         handleUpdate,
         handleAddTask,
         handleRemoveColumn,

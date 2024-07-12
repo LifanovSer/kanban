@@ -1,7 +1,7 @@
 .aside {
     position: relative;
     overflow: hidden;
-    width: 190px;
+    width: 150px;
     min-height: 100vh;
     background: var(--bc-aside-menu);
     display: flex;
@@ -99,43 +99,65 @@
     }
 
     &__button-question {
+        width: 100%;
+        min-height: 30px;
         display: flex;
+        justify-content: start;
         align-items: center;
         gap: 8px;
     }
 }
 
-@media (max-width: 1850px) {
-    .aside {
-        &__wrapper-sidebar-buttons {
-            padding: 20px;
-        }
-
-        &__bottom-buttons-list {
-            padding: 20px;
-        }
-    }
-}
-
 @media (max-width: 1300px) {
     .aside {
-        &__wrapper-sidebar-buttons {
-            padding: 20px 15px;
-        }
         &__button-text {
-            font-size: 11px;
-        }
-
-        &__bottom-buttons-list {
-            padding: 20px 15px;
+            font-size: 12px;
         }
     }
 }
 
-@media (max-width: 1200px) {
-    // .aside {
-    //     &__button-text {
-    //         display: none;
-    //     }
-    // }
+@media (max-width: 1100px) {
+    .aside {
+        &__wrapper-sidebar-buttons,
+        &__bottom-buttons-list {
+            padding: 0px;
+        }
+
+        &__button-question-medium-screen,
+        &__sidebar-button-medium-screen {
+            justify-content: center;
+        }
+
+        &__sidebar-button,
+        &__button-question {
+            padding: 0px 15px;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .aside {
+        min-width: 80px;
+
+        &__full-menu {
+            display: none;
+        }
+
+        &__button-text {
+            display: none;
+        }
+
+        &__buttons-list--position {
+            margin-top: 40px;
+        }
+
+        &__bottom-buttons-list--position {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .aside {
+        min-width: 60px;
+    }
 }

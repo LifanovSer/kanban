@@ -11,24 +11,13 @@ export const HeaderColumn: React.FC<HeaderColumnProps> = ({
     all_titles,
     id,
     handleRemoveColumn,
-    // openSelects,
-    // handleOpenSelect,
     handleUpdateColumnType,
 }) => {
-    const [openSelects, setOpenSelects] = useState<{ [key: string]: boolean }>({
-        [id]: true,
-    });
+    const [openSelects, setOpenSelects] = useState<null | string>(null);
 
     const handleOpenSelect = (id: string) => {
-        setOpenSelects((prev) => ({
-            ...prev,
-            [id]: !prev[id],
-        }));
+        setOpenSelects((prev) => (prev === id ? null : id));
     };
-
-    // const handleEditClick = (id: string) => {
-    //     handleOpenSelect(id);
-    // };
 
     const handleSelectChange = (
         event: React.ChangeEvent<HTMLSelectElement>,
@@ -53,7 +42,7 @@ export const HeaderColumn: React.FC<HeaderColumnProps> = ({
                     type={type}
                     className={styleHeader["header-column__picture-type"]}
                 />
-                {openSelects[id] ? (
+                {type === "new" || openSelects === id ? (
                     <UiSelect
                         title={column_title}
                         onChange={handleSelectChange}
@@ -78,9 +67,6 @@ export const HeaderColumn: React.FC<HeaderColumnProps> = ({
                     onClick={() => handleOpenSelect(id)}
                     className={styleHeader["header-column__change-button"]}
                 >
-                    {/* <Edit
-                        className={styleHeader["svg-picture"]}
-                    /> */}
                     <UiSvgIcon
                         name="edit"
                         width="15"
@@ -92,7 +78,6 @@ export const HeaderColumn: React.FC<HeaderColumnProps> = ({
                     onClick={() => handleRemoveColumn(id)}
                     className={styleHeader["header-column__change-button"]}
                 >
-                    {/* <Trash className={styleHeader["svg-picture"]} /> */}
                     <UiSvgIcon
                         name="trash"
                         width="15"
@@ -104,27 +89,3 @@ export const HeaderColumn: React.FC<HeaderColumnProps> = ({
         </div>
     );
 };
-
-{
-    /* <>
-<input
-    type="text"
-    value={newTitle}
-    onChange={(e) => setNewTitle(e.target.value)} // Событие onBlur сохраняет изменения, когда поле теряет фокус
-    onKeyDown={(e) => {
-        if (e.key === "Enter") handleSave(); // Сохраняет изменения при нажатии Enter
-        if (e.key === "Escape") setIsEditing(false); // Отменяет редактирование при нажатии Escape
-    }}
-    autoFocus
-    className={styleHeader["edit-input"]}
-/>
-</> */
-}
-
-// const handleEditClick = () => {
-//     if (openSelect.id === id) {
-//         handleOpenSelect(null, false); // Close select
-//     } else {
-//         handleOpenSelect(id, true); // Open select
-//     }
-// };

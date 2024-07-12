@@ -138,6 +138,10 @@
         &__button-question {
             padding: 0px 15px;
         }
+
+        &__buttons-list--position {
+            margin-top: 40px;
+        }
     }
 }
 @media (max-width: 900px) {
@@ -150,10 +154,6 @@
 
         &__button-text {
             display: none;
-        }
-
-        &__buttons-list--position {
-            margin-top: 40px;
         }
     }
 }
